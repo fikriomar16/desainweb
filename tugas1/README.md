@@ -117,8 +117,8 @@ Preview : ![preview](https://raw.githubusercontent.com/fikriomar16/desainweb/mas
 * `<p>`
 	contoh : 
 	`<p align="left">`
-	`OS Ubuntu pada umumnya menggunakan Unity sebagai Desktop Environment.``<br>`
-	`Pada Elementary OS, DE yang digunakan adalah Pantheon.``<br>`
+	`OS Ubuntu pada umumnya menggunakan Unity sebagai Desktop Environment.<br>`
+	`Pada Elementary OS, DE yang digunakan adalah Pantheon.<br>`
 	`</p>`
 
 * `<!--..-->`
@@ -126,9 +126,9 @@ Preview : ![preview](https://raw.githubusercontent.com/fikriomar16/desainweb/mas
 
 * `<address>`
 	contoh : 
-	`<address>
-		<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>
-	</address>`
+	`<address>`
+		`<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>`
+	`</address>`
 
 * `<center>`
 	contoh : `<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>`
@@ -147,16 +147,16 @@ Preview : ![preview](https://raw.githubusercontent.com/fikriomar16/desainweb/mas
 
 * `<nav>, <ul>, <li>`
 	contoh : 
-	`<nav>
-		<ul>
-			<h3> ~ How to modding your linux desktop ~ </h3>
-			<li><a href=""> Home </a></li>
-			<li><a href=""> Tutorial </a></li>
-			<li><a href=""> Dotfiles </a></li>
-			<li><a href=""> Help </a></li>
-			<li><a href=""> About </a></li>
-		</ul>
-	</nav>`
+	`<nav>`
+		`<ul>`
+			`<h3> ~ How to modding your linux desktop ~ </h3>`
+			`<li><a href=""> Home </a></li>`
+			`<li><a href=""> Tutorial </a></li>`
+			`<li><a href=""> Dotfiles </a></li>`
+			`<li><a href=""> Help </a></li>`
+			`<li><a href=""> About </a></li>`
+		`</ul>`
+	`</nav>`
 
 * `<style>`
 	contoh : 
@@ -191,19 +191,19 @@ Preview : ![preview](https://raw.githubusercontent.com/fikriomar16/desainweb/mas
 
 * `<footer>`
 	contoh : 
-	`<footer>
-		<address>
-			<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>
-		</address>
-	</footer>`
+	`<footer>`
+		`<address>`
+			`<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>`
+		`</address>`
+	`</footer>`
 
 * `<aside>`
 	contoh :
-	`<aside>
-		<section>
-			<h3> Social Media </h3>
-				<a href="https://github.com/fikriomar16"> > Github</a><br><br>
-				<a href="https://plus.google.com/+FikriOmar"> > Google+</a><br><br>
-				<a href="https://fikriomar16.deviantart.com"> > DeviantArt</a><br><br>
-		</section>
-	</aside>`
+	`<aside>`
+		`<section>`
+			`<h3> Social Media </h3>`
+				`<a href="https://github.com/fikriomar16"> > Github</a><br><br>`
+				`<a href="https://plus.google.com/+FikriOmar"> > Google+</a><br><br>`
+				`<a href="https://fikriomar16.deviantart.com"> > DeviantArt</a><br><br>`
+		`</section>`
+	`</aside>`
