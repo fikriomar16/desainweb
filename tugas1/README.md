@@ -57,7 +57,7 @@ Tag ```<title>``` digunakan untuk menyatakan title website anda. Tag ini disimpa
 .......
 </body>
 ```
-Tag <body> ini digunakan untuk menampilkan isi dari website anda. Semua yang ingin anda tampilkan, dimasukan dalam tag <body> ini, bisa image, teks, video, musik dan lain-lain.
+Tag ```<body>``` ini digunakan untuk menampilkan isi dari website anda. Semua yang ingin anda tampilkan, dimasukan dalam tag ```<body>``` ini, bisa image, teks, video, musik dan lain-lain.
 
 ## Tag-tag HTML Beserta Penjelasan
 
@@ -97,3 +97,139 @@ Tag <body> ini digunakan untuk menampilkan isi dari website anda. Semua yang ing
 | `<head>` | Membuat informasi tentang dokumen |
 
 ## Contoh kode HTML disetiap tag
+
+Untuk contoh source code, dapat dilihat pada folder `tugas1`
+
+Preview : ![preview](https://raw.githubusercontent.com/fikriomar16/desainweb/master/tugas1/tugas1/preview.png)
+
+* `<title>`
+	contoh : ```html
+	<title>Tugas Topic 1 by Omar</title>
+	```
+
+* `<link>`
+	contoh : ```html
+	<link rel="icon" href="assets/img/icon.png">
+	```
+
+* `<font>`
+	contoh : ```html
+	<font face="iosevka Nerd font" color="#e7e8eb">
+	```
+
+* `<h1>`
+	contoh : ```html
+	<h1 align="left"> Masochist Desktoper </h1>
+	```
+
+* `<p>`
+	contoh : ```html
+	<p align="left">
+	OS Ubuntu pada umumnya menggunakan Unity sebagai Desktop Environment.<br>
+	Pada Elementary OS, DE yang digunakan adalah Pantheon.<br><br>
+	</p>
+	```
+
+* `<!--..-->`
+	contoh : ```html
+	<!-- Ini adalah contoh comment -->
+	```
+
+* `<address>`
+	contoh : ```html
+	<address>
+		<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>
+	</address>
+	```
+
+* `<center>`
+	contoh : ```html
+	<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>
+	```
+
+* `<input>`
+	contoh : ```html
+	<input class="form-control mr-sm-2" placeholder="Type Something...." type="text" list="programming">
+	```
+
+* `<button>`
+	contoh : ```html
+	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	```
+
+* `<img>`
+	contoh : ```html
+	<img src="assets/img/de.png" width="300" height="200">
+	```
+
+* `<a>`
+	contoh : ```html
+	<a href="https://github.com/fikriomar16">Github</a>
+	```
+
+* `<nav>, <ul>, <li>`
+	contoh : ```html
+	<nav>
+		<ul>
+			<h3> ~ How to modding your linux desktop ~ </h3>
+			<li><a href=""> Home </a></li>
+			<li><a href=""> Tutorial </a></li>
+			<li><a href=""> Dotfiles </a></li>
+			<li><a href=""> Help </a></li>
+			<li><a href=""> About </a></li>
+		</ul>
+	</nav>
+	```
+
+* `<style>`
+	contoh : ```html
+	<style>
+	body{
+		background-image: url("assets/img/wp.jpg");
+	}
+	h1{
+		width: 940px;
+		height: 40px;
+		margin-left: : 30px;
+	}
+	nav{
+		margin-bottom: 50px;
+	}
+	aside, nav li{
+		display: inline;
+		margin-right: 40px;
+	}
+	nav li a, a{
+		color: #e7e8eb;
+		text-decoration: none;
+	}
+	aside{
+		float: right;
+	}
+	img{
+		margin-left: 30px;
+		margin-right: 20px;
+	}
+	</style>
+	```
+
+* `<footer>`
+	contoh : ```html
+	<footer>
+		<address>
+			<center><p><a href="https://github.com/fikriomar16" title="">@Fikri Omar</a></p></center>
+		</address>
+	</footer>
+	```
+
+* `<aside>`
+	contoh : ```html
+	<aside>
+		<section>
+			<h3> Social Media </h3>
+				<a href="https://github.com/fikriomar16"> > Github</a><br><br>
+				<a href="https://plus.google.com/+FikriOmar"> > Google+</a><br><br>
+				<a href="https://fikriomar16.deviantart.com"> > DeviantArt</a><br><br>
+		</section>
+	</aside>
+	```
