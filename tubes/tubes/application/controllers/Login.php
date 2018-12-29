@@ -26,8 +26,6 @@ class Login extends CI_Controller {
 	{
 		$username = $this->input->post('username');
 		$pass = md5($this->input->post('password'));
-		//echo $username;
-		//echo $pass;
 		$data = $this->login->login($username,$pass);
 		if ($data) {
 			$this->login->update_login($username);

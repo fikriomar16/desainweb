@@ -34,21 +34,24 @@
 </head>
 <body>
 	<div class="container-fluid md-form">
-		<div class="card" style="width: 30%; margin: 12% auto;">
-			<div class="card-header blue-gradient text-white">
+		<center>
+			<img class="img-fluid mx-auto mt-3" style="width: 140px;" src="<?= base_url('assets/img/uty.png') ?>">
+		</center>
+		<div class="card col-lg-4 m-auto mt-lg-5">
+			<div class="card-header blue-gradient text-white rounded z-depth-3 m-lg-3">
 				<h3 align="center">Login Admin</h3>
 			</div>
-			<div class="card-body">
+			<div class="card-body card-body-cascade">
 				<form method="POST" action="<?= base_url('Login/masuk') ?>">
 					<div class="form-group">
 						<div class="input-group">
-							<span class="input-group-addon"><i class="fas fa-mail-bulk fa-lg"></i></span>
+							<span class="input-group-addon"><i class="fas fa-mail-bulk fa-lg animated rotateIn"></i></span>
 							<input type="email" name="username" class="form-control text-center mr-sm-2" placeholder="e-mail">
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="input-group">
-							<span class="input-group-addon"><i class="fas fa-lock fa-lg"></i></span>
+							<span class="input-group-addon"><i class="fas fa-lock fa-lg animated rotateIn"></i></span>
 							<input type="password" name="password" class="form-control text-center mr-sm-2" placeholder="password">
 						</div>
 					</div>
@@ -58,12 +61,12 @@
 					<div class="row mt-3">
 						<div class="col">
 							<button class="btn btn-sm btn-outline-secondary btn-block" type="button" onclick="mdlreg();">
-								<i class="fas fa-lg fa-address-book"></i>&nbsp;&nbsp;Daftar
+								<i class="fas fa-lg fa-address-book animated rotateIn"></i>&nbsp;&nbsp;Daftar
 							</button>
 						</div>
 						<div class="col">
 							<button class="btn btn-sm btn-outline-info btn-block" type="button" onclick="mdlpass();">
-								<i class="fas fa-lg fa-question"></i>&nbsp;&nbsp;Lupa Password
+								<i class="fas fa-lg fa-question animated rotateIn"></i>&nbsp;&nbsp;Lupa Password
 							</button>
 						</div>
 					</div>

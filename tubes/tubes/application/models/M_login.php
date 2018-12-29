@@ -16,6 +16,7 @@ class M_login extends CI_Model {
 		$this->db->from('admin');
 		$this->db->where('email', $email);
 		$this->db->where('password', $password);
+		$this->db->where('active', 'True');
 		if ($query = $this->db->get()) {
 			return $query->row_array();
 		} else {

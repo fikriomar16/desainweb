@@ -44,6 +44,24 @@
 					"sInfoFiltered": "(disaring dari _MAX_ total data)"
 				}				
 			});
+			$('#tabhapus').DataTable({
+				"lengthMenu": [[5,10, 25, 50, -1], [5,10, 25, 50, "All"]],
+				"oLanguage": {
+					"oPaginate": {					
+						"sFirst": "Awal",
+						"sLast": "Akhir",
+						"sNext": "Selanjutnya",
+						"sPrevious": "Sebelumnya"
+					},
+					"sSearch": "Cari :",
+					"sSearchPlaceholder": "",
+					"sZeroRecords": "Data Tidak Ditemukan",
+					"sLengthMenu": "Tampilkan _MENU_ data",
+					"sInfo": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
+					"sInfoEmpty": "Tidak Ada Data Ditemukan",
+					"sInfoFiltered": "(disaring dari _MAX_ total data)"
+				}				
+			});
 			// $('#tabadmin').find('label').each(function () {
 			// 	$(this).parent().append($(this).children());
 			// });

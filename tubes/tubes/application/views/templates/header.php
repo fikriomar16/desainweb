@@ -12,6 +12,25 @@
 	<link rel="stylesheet" href="<?= base_url() ?>assets/datatable/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" href="<?= base_url() ?>assets/sweetalert/dist/sweetalert2.css">
 	<script src="<?= base_url() ?>assets/sweetalert/dist/sweetalert2.js"></script>
+	<script type="text/javascript">
+		function exit() {
+		swal({
+			confirmButtonClass: 'btn btn-success',
+			cancelButtonClass: 'btn btn-danger',
+			buttonsStyling: false,
+			title: 'Yakin ingin logout ?',
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonText: 'Ya !',
+			cancelButtonText: 'Batal'
+		}).then((result) => {
+			if (result.value) {
+				window.location.replace('<?= base_url('Login/keluar') ?>');
+				// window.location.replace('admin/delete');
+			}
+		})
+	}
+	</script>
 	<style type="text/css">
 		body{
 			/*background: #e7e8eb;*/
@@ -39,7 +58,7 @@
 				<!-- Features -->
 				<li class="nav-item dropdown mega-dropdown active">
 					<a class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						FIKRI OMAR
+						<i class="fas fa-user-circle animated rotateIn"></i>&nbsp;&nbsp;<?php print_r($this->session->userdata('login')['fullname']); ?>
 						<span class="sr-only">(current)</span>
 					</a>
 					<div class="dropdown-menu mega-menu z-depth-1 special-color-dark py-5 px-5" aria-labelledby="navbarDropdownMenuLink2" style="width: 700px;">
@@ -62,6 +81,11 @@
 								<ul class="nav flex-column">
 									<li class="nav-item">
 										<a class="nav-link" href="<?= base_url('Riwayat') ?>">Riwayat</a>
+									</li>
+								</ul>
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a class="nav-link" href="<?= base_url('Terhapus') ?>">Data Terhapus</a>
 									</li>
 								</ul>
 							</div>
@@ -133,7 +157,9 @@
 					</div>
 				</li>
 			</ul>
-			<a href="<?= base_url('Login/keluar') ?>" class="btn btn-sm btn-danger float-right">Logout</a>
+			<a onclick="exit();" class="btn btn-sm btn-danger float-right">
+				<i class="fas fa-sign-in-alt animated rotateIn"></i>&nbsp;&nbsp;Logout
+			</a>
 		</div>
 	</nav>
 	<div class="container-fluid">

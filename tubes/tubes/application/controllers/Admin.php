@@ -26,6 +26,7 @@ class Admin extends CI_Controller {
 		$this->load->view('templates/header', $data);
 		$this->load->view('admin', $data);
 		$this->load->view('modal/mdladmin', $data);
+		$this->load->view('modal/mdldel', $data);
 		$this->load->view('templates/footer', $data);		
 	}
 
@@ -36,11 +37,14 @@ class Admin extends CI_Controller {
 			'email'=> $this->input->post('addmail'),
 			'password'=> md5($this->input->post('addpass'))
 		);
+
 		$id = $this->input->post('idadmin');
 		$name = $this->input->post('adduser');
 		$email = $this->input->post('addmail');
 		$pass = $this->input->post('addpass');
-		if (empty($id)) {			
+
+		if (empty($id)) {
+			// Jika id kosong, maka akan melakukan insert data
 			if ($this->admin->cek_email($email)) {
 				echo "EMail Sudah terpakai";
 			} else {
@@ -48,7 +52,7 @@ class Admin extends CI_Controller {
 				redirect('admin','refresh');
 			}
 		} else {
-			//echo $id."<br>".$name."<br>".$email."<br>".$pass."<br>";
+			// Jika id terisi, maka akan melakukan update data
 			$cek_pass = $this->admin->cek_pass($email);
 			$get_pass = $cek_pass[0]['password'];
 			if ($get_pass == $pass) {
@@ -65,6 +69,16 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function delete()
+	{
+		$id = $this->input->post('id');
+
+		$id_buang = $this->admin->get_admin($id);
+		$this->admin->buang_admin($id_buang);
+		$this->admin->delete_admin($id);
+
+		redirect('admin','refresh');
+	}
 }
 
 /* End of file Admin.php */

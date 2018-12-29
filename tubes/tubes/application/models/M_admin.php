@@ -17,48 +17,20 @@ class M_admin extends CI_Model {
 
 	public function cek_email($email)
 	{
-		# code...
 		$this->db->select('*');
 		$this->db->from('admin');
 		$this->db->where('email', $email);
 
 		$query = $this->db->get();
 		if ($query->num_rows()) {
-			# code...
 			return true;
 		} else {
-			# code...
 			return false;
 		}		
 	}
 
-	public function insert_admin($data)
-	{
-		# code...
-		$this->db->insert('admin', $data);
-		return $this->db->insert_id();
-	}
-
-	public function update_admin($id,$data)
-	{
-		# code...
-		$this->db->where('id_admin', $id);
-		return $this->db->update('admin', $data);
-	}
-
-	public function move_admin($id,$data)
-	{
-		# code...
-	}
-
-	public function delete_admin($id)
-	{
-		# code...
-	}
-
 	public function cek_pass($email)
 	{
-		# code...
 		$this->db->select('password');
 		$this->db->from('admin');
 		$this->db->where('email', $email);
@@ -70,6 +42,39 @@ class M_admin extends CI_Model {
 		} else {
 			// return false;
 		}	
+	}
+
+	public function insert_admin($data)
+	{
+		$this->db->insert('admin', $data);
+		return $this->db->insert_id();
+	}
+
+	public function update_admin($id,$data)
+	{
+		$this->db->where('id_admin', $id);
+		return $this->db->update('admin', $data);
+	}
+
+	public function delete_admin($id)
+	{
+		$this->db->where('id_admin', $id);
+		return $this->db->delete('admin');
+	}
+
+	public function get_admin($id)
+	{
+		$this->db->select('*');
+		$this->db->from('admin');
+		$this->db->where('id_admin', $id);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
+
+	public function buang_admin($data)
+	{
+		$this->db->insert('buang', $data);
+		return $this->db->insert_id();
 	}
 
 }
