@@ -157,7 +157,7 @@
 					</div>
 				</li>
 			</ul>
-			<a onclick="exit();" class="btn btn-sm btn-danger float-right">
+			<a onclick="exit();" class="btn btn-sm btn-warning float-right">
 				<i class="fas fa-sign-in-alt animated rotateIn"></i>&nbsp;&nbsp;Logout
 			</a>
 		</div>

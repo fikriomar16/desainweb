@@ -15,10 +15,11 @@
 		</thead>
 		<tbody>
 			<?php
+			$i = 1;
 			foreach ($buang_list as $key => $row){
 			?>
 			<tr>
-				<td><?= $row->id ?></td>
+				<td><?= $i ?></td>
 				<td><?= $row->fullname ?></td>
 				<td><?= $row->email ?></td>
 				<td><?= $row->password ?></td>
@@ -26,6 +27,7 @@
 				<td><?= $row->active ?></td>
 			</tr>
 			<?php
+			$i++;
 			}
 			?>
 		</tbody>

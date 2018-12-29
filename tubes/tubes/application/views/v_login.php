@@ -37,7 +37,7 @@
 		<center>
 			<img class="img-fluid mx-auto mt-3" style="width: 140px;" src="<?= base_url('assets/img/uty.png') ?>">
 		</center>
-		<div class="card col-lg-4 m-auto mt-lg-5">
+		<div class="card col-lg-4 m-auto mt-lg-4">
 			<div class="card-header blue-gradient text-white rounded z-depth-3 m-lg-3">
 				<h3 align="center">Login Admin</h3>
 			</div>
@@ -73,6 +73,13 @@
 				</form>
 			</div>
 			<div class="card-footer"></div>
+		</div>
+		<div class="fixed-bottom p-3">
+			<center>
+				<a class="btn btn-sm btn-dark aqua-gradient" href="https://git.io/tubesweb5150411175" target="_blank">
+					<i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;Link Project
+				</a>
+			</center>
 		</div>
 	</div>
 	<script src="<?= base_url() ?>assets/js/jquery-3.3.1.min.js"></script>

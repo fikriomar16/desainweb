@@ -13,6 +13,7 @@ NIM  : 5150411175 <br>
 - Mencatat semua aktivitas
 	- waktu
 	- ip address
+	- OS yang digunakan
 	- yang melakukan aktivitas
 	- keterangan (insert, update, delete)
 - Membuat user baru melalui form registrasi

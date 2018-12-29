@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		//Do your magic here
+		$this->load->library('user_agent');
 	}
 
 	public function index()

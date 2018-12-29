@@ -71,9 +71,24 @@ class M_admin extends CI_Model {
 		return $query->row_array();
 	}
 
+	public function get_email($id)
+	{
+		$this->db->select('email');
+		$this->db->from('admin');
+		$this->db->where('id_admin', $id);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
+
 	public function buang_admin($data)
 	{
 		$this->db->insert('buang', $data);
+		return $this->db->insert_id();
+	}
+
+	public function catat_log($data)
+	{
+		$this->db->insert('riwayat', $data);
 		return $this->db->insert_id();
 	}
 
