@@ -157,6 +157,12 @@
 					</div>
 				</li>
 			</ul>
+			<p class="float-right mr-3 my-auto text-white">
+				<i class="fas fa-calendar"></i>&nbsp;&nbsp;<?= date('d/m/Y'); ?>
+			</p>
+			<p class="float-right mr-3 my-auto text-white">
+				<i class="fas fa-clock"></i>&nbsp;&nbsp;<?= date('H:m - A'); ?>
+			</p>
 			<a onclick="exit();" class="btn btn-sm btn-warning float-right">
 				<i class="fas fa-sign-in-alt animated rotateIn"></i>&nbsp;&nbsp;Logout
 			</a>

@@ -55,7 +55,7 @@ class Admin extends CI_Controller {
 			'admin' => $this->session->userdata('login')['email'],
 			'ip_address' => $this->input->ip_address(),
 			'os' => $this->agent->platform(),
-			'user' => $this->input->post('adduser'),
+			'user' => $this->input->post('addmail'),
 			'ket' => 'Insert User'
 		);
 		$log_update = array(
