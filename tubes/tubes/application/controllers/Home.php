@@ -14,7 +14,7 @@ class Home extends CI_Controller {
 	{
 		$login = $this->session->userdata('login');
 		if (!$login) {
-			redirect('masuk','refresh');
+			redirect('masuk');
 		}
 		$data['title'] = 'Dashboard - 5150411175';
 		// $this->load->view('home', $data);

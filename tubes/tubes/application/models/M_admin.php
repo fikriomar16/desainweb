@@ -92,6 +92,26 @@ class M_admin extends CI_Model {
 		return $this->db->insert_id();
 	}
 
+	public function cek_aktif($email)
+	{
+		$this->db->select('email');
+		$this->db->from('admin');
+		$this->db->where('md5(email)', $email);
+		$query = $this->db->get();
+		
+		if ($query->num_rows()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function aktif_akun($email,$data)
+	{
+		$this->db->where('md5(email)', $email);
+		return $this->db->update('admin', $data);
+	}
+
 }
 
 /* End of file M_admin.php */

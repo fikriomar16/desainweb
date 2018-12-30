@@ -54,3 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['masuk'] = 'login';
+$route['registrasi'] = 'Login/new_user';
+$route['konfir_akun/(:any)'] = 'Login/aktivasi/$1';

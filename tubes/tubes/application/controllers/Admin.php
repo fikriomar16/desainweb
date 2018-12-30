@@ -32,7 +32,7 @@ class Admin extends CI_Controller {
 
 		$login = $this->session->userdata('login');
 		if (!$login) {
-			redirect('masuk','refresh');
+			redirect('masuk');
 		}
 		$data['title'] = 'Kelola Data Admin - 5150411175';
 		// $this->load->view('home', $data);
@@ -75,11 +75,11 @@ class Admin extends CI_Controller {
 			// Jika id kosong, maka akan melakukan insert data
 			if ($this->admin->cek_email($email)) {
 				echo "EMail Sudah terpakai";
-				redirect('admin','refresh');
+				redirect('admin');
 			} else {
 				$this->admin->insert_admin($data);
 				$this->admin->catat_log($log_insert);
-				redirect('admin','refresh');
+				redirect('admin');
 			}
 		} else {
 			// Jika id terisi, maka akan melakukan update data
@@ -92,11 +92,11 @@ class Admin extends CI_Controller {
 				);
 				$this->admin->update_admin($id,$data);
 				$this->admin->catat_log($log_update);
-				redirect('admin','refresh');
+				redirect('admin');
 			} else {
 				$this->admin->update_admin($id,$data);
 				$this->admin->catat_log($log_update);
-				redirect('admin','refresh');
+				redirect('admin');
 			}			
 		}
 	}
@@ -120,7 +120,7 @@ class Admin extends CI_Controller {
 		$this->admin->buang_admin($data_buang);
 		$this->admin->delete_admin($id);
 
-		redirect('admin','refresh');
+		redirect('admin');
 	}
 
 }

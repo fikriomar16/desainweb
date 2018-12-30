@@ -10,7 +10,7 @@ class Riwayat extends CI_Controller {
 
 		$login = $this->session->userdata('login');
 		if (!$login) {
-			redirect('masuk','refresh');
+			redirect('masuk');
 		}
 		$data['title'] = 'Riwayat - 5150411175';
 

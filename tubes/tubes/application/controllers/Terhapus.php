@@ -11,6 +11,10 @@ class Terhapus extends CI_Controller {
 
 	public function index()
 	{
+		$login = $this->session->userdata('login');
+		if (!$login) {
+			redirect('masuk');
+		}
 		$data['buang_list'] = $this->terhapus->show_terhapus();
 		$data['title'] = 'Data Terhapus - 5150411175';
 		$this->load->view('templates/header', $data);
