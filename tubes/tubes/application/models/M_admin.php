@@ -127,6 +127,12 @@ class M_admin extends CI_Model {
 		return $this->db->delete('admin');
 	}
 
+	public function respas($email,$pass)
+	{
+		$this->db->where('md5(email)', $email);
+		return $this->db->update('admin', $data);
+	}
+
 }
 
 /* End of file M_admin.php */

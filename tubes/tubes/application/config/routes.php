@@ -55,4 +55,10 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['masuk'] = 'login';
 $route['registrasi'] = 'Login/new_user';
+
 $route['konfir_akun/(:any)'] = 'Login/aktivasi/$1';
+
+$route['reset_dir/(:any)'] = 'Login/resetpass/$1';
+$route['reset_pass'] = 'Akun/resetpass';
+
+$route['kirimreset'] = 'Login/send_pass';

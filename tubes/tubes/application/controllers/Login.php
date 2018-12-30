@@ -19,11 +19,11 @@ class Login extends CI_Controller {
 		}
 
 		$data['title']='Desain Web - 5150411175';
-		// $this->load->view('templates/login_header', $data);
+		// $this->load->view('templates/form_header', $data);
 		$this->load->view('v_login', $data);
 		$this->load->view('modal/mdlpass', $data);
 		$this->load->view('modal/mdlreg', $data);
-		// $this->load->view('templates/login_footer', $data);
+		// $this->load->view('templates/form_footer', $data);
 	}
 
 	public function masuk()
@@ -99,6 +99,43 @@ class Login extends CI_Controller {
 		}
 	}
 
+	public function send_pass()
+	{
+		$email = $this->input->post('usermail');
+		//konfigurai send mail dll
+
+		$from = "slimeque69@gmail.com";
+		$subject = 'Konfirmasi reset password';
+		$message = 'Yang Terhormat, <b>' . $nama . '</b><br><br> Silahkan klik alamat dibawah untuk melakukan reset password!<br><a href=\'' . base_url('') . 'reset_dir/' . md5($email) . '\'>' . base_url('') . 'reset_dir/' . md5($email) . '</a><br><br>Terima Kasih';
+
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'ssl://smtp.googlemail.com';
+		$config['smtp_port'] = '465';
+		$config['smtp_user'] = $from;
+		$config['smtp_pass'] = 'slime2017';  // Password email
+		$config['mailtype'] = 'html';
+		$config['charset'] = 'iso-8859-1';
+		$config['wordwrap'] = 'TRUE';
+		$config['newline'] = "\r\n";
+
+		$this->load->library('email',$config);
+		$this->email->initialize($config);
+			
+		$this->email->from($from, 'Omar | Desain Web - 5150411175');
+		$this->email->to($email);
+		$this->email->subject($subject);
+		$this->email->message($message);
+
+		if ($this->email->send()) {
+			$this->session->set_flashdata('sukses', 'Reset password successfully. Silahlah cek akun anda!');
+				//redirect('masuk');
+		} else {
+			$this->session->set_flashdata('gagal', $this->email->print_debugger());
+		}
+
+		redirect('masuk');
+	}
+
 	public function aktivasi()
 	{
 		$code = $this->uri->segment(2);
@@ -113,6 +150,14 @@ class Login extends CI_Controller {
 			$this->admin->hangus_akun($code);
 		}
 		
+	}
+
+	public function resetpass($email)
+	{
+		$pars['title'] = 'Reset Password - '.$email.' ';
+		$this->load->view('templates/form_header',$pars);
+		$this->load->view('resetpass',$pars);
+		$this->load->view('templates/form_footer',$pars);
 	}
 
 }
