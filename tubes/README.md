@@ -5,7 +5,7 @@ NIM  : 5150411175 <br>
 [Link Project Ini](https://git.io/tubesweb5150411175)
 
 ## Preview
-![preview](https://i.imgur.com/XJ5EIRe.gif)
+![preview](https://i.imgur.com/lRClKao.gif)
 
 ### Isi Project
 - MEGA MENU MANAJEMEN USER
