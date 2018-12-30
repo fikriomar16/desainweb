@@ -94,13 +94,22 @@ class M_admin extends CI_Model {
 
 	public function cek_aktif($email)
 	{
-		$this->db->select('email');
+		$now = date("Y-m-d H:i:s");
+
+		$this->db->select("TIMESTAMPDIFF(MINUTE,tglwaktu,'$now') AS menit");
 		$this->db->from('admin');
+		$this->db->where('active', 'False');
 		$this->db->where('md5(email)', $email);
 		$query = $this->db->get();
-		
-		if ($query->num_rows()) {
-			return true;
+
+		if ($query->num_rows() > 0) {
+			$data['a'] = $query->result_array();
+			$menit = $data['a']['0']['menit'];
+			if ($menit <= 1) {
+				return true;
+			} else {
+				return false;
+			}
 		} else {
 			return false;
 		}
@@ -110,6 +119,12 @@ class M_admin extends CI_Model {
 	{
 		$this->db->where('md5(email)', $email);
 		return $this->db->update('admin', $data);
+	}
+
+	public function hangus_akun($email)
+	{
+		$this->db->where('md5(email)', $email);
+		return $this->db->delete('admin');
 	}
 
 }

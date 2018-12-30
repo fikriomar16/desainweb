@@ -109,7 +109,8 @@ class Login extends CI_Controller {
 			echo "Sukses Aktivasi";
 			redirect('masuk');
 		} else {
-			echo "Terjadi Sebuah Kesalahan";
+			echo "Waktu untuk aktivasi telah kadaluarsa";
+			$this->admin->hangus_akun($code);
 		}
 		
 	}

@@ -12,7 +12,7 @@ class Akun extends CI_Controller {
 
 	public function index()
 	{
-		
+		redirect('masuk');
 	}
 
 	public function new_user()
