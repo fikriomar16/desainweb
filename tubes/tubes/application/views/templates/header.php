@@ -29,7 +29,7 @@
 				// window.location.replace('admin/delete');
 			}
 		})
-	}
+	};
 	</script>
 	<style type="text/css">
 		body{

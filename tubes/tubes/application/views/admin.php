@@ -37,6 +37,19 @@
 		$('[name="id"]').val(id);
 		$('[name="name"]').val(name);
 	}
+	function notif_hapus() {
+		swal({
+			title: "Data Telah Terhapus",
+			type: "success",
+			showConfirmButton: false,
+			timer: 2500
+		});
+	};
+	function reloadtab() {
+		//$('#tabadmin').DataTable().fnDraw();
+		var tabadmin = document.getElementById("tabadmin");
+		tabadmin.refresh();
+	}
 </script>
 <center>
 	<h4 class="mt-3">Manajemen Admin</h4>
@@ -44,6 +57,7 @@
 <button type="button" class="btn btn-success mb-2 float-left" onclick="mdladmin();" data-toggle="tooltip" data-placement="left" title="Tambah Data">
 	<i class="fas fa-plus-square fa-lg"></i>&nbsp;&nbsp;Tambah Data
 </button>
+<!-- <button class="btn btn-light" onclick="reloadtab()">Reload</button> -->
 <div class="table-responsive text-white">
 	<table class="table table-hover table-dark" id="tabadmin">
 		<thead class="thead-light">

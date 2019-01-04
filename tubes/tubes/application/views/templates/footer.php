@@ -5,6 +5,7 @@
 	<script src="<?= base_url() ?>assets/js/mdb.js"></script>
 	<script src="<?= base_url() ?>assets/awesome550/js/all.js"></script>
 	<script src="<?= base_url() ?>assets/js/addons/datatables.js"></script>
+	<!-- <script src="<?= base_url() ?>assets/js/addons/fnReloadAjax.js"></script> -->
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('[data-toggle="tooltip"]').tooltip();
@@ -42,7 +43,7 @@
 					"sInfo": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
 					"sInfoEmpty": "Tidak Ada Data Ditemukan",
 					"sInfoFiltered": "(disaring dari _MAX_ total data)"
-				}				
+				}			
 			});
 			$('#tabhapus').DataTable({
 				"lengthMenu": [[5,10, 25, 50, -1], [5,10, 25, 50, "All"]],
@@ -62,21 +63,29 @@
 					"sInfoFiltered": "(disaring dari _MAX_ total data)"
 				}				
 			});
-			// $('#tabadmin').find('label').each(function () {
-			// 	$(this).parent().append($(this).children());
-			// });
-			// $('#tabadmin .dataTables_filter').find('input').each(function () {
-			// 	$('input').attr("placeholder", "Cari");
-			// 	$('input').removeClass('form-control-sm');
-			// });
-			// $('#tabadmin .dataTables_length').addClass('d-flex flex-row');
-			// $('#tabadmin .dataTables_filter').addClass('md-form');
-			// $('#tabadmin select').removeClass('custom-select custom-select-sm form-control form-control-sm');
-			// $('#tabadmin select').addClass('mdb-select md-form');
-			// $('#tabadmin .dataTables_filter').find('label').remove();
-			$('#tabadmin .mdb-select').materialSelect();
-			$('.mdb-select').materialSelect();
 		});
+		function add_update() {
+			// body...
+			$.ajax({});
+		}
+		function del_user() {
+			// body...
+			$.ajax({
+				type: "POST",
+				url: "<?= base_url('admin/delete') ?>",
+				data: $("#form-del").serialize(),
+				cache: false,
+				dataType: "json",
+				success: function(data){
+					swal('Gagal');
+				},
+				error: function (err){
+					console.log(err);
+					notif_hapus();
+				}
+			});
+			$("#tabadmin").DataTable().fnReloadAjax();
+		}
 	</script>
 </body>
 </html>

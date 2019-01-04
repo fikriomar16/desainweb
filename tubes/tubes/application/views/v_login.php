@@ -30,6 +30,25 @@
 			$('#regmail').val('');
 			$('#regpass').val('');
 		}
+		function sukses_reg() {
+			swal({
+				position: 'bottom-end',
+				title: "Sukses mengirim data",
+				text: "Silahkan cek email anda",
+				showConfirmButton: false,
+				type: "success",
+				timer: 3500
+			});
+		}
+		function gagal_reg() {
+			swal({
+				position: 'bottom-end',
+				title: "Gagal mengirim data",
+				showConfirmButton: false,
+				type: "warning",
+				timer: 3500
+			});
+		}
 	</script>
 </head>
 <body>

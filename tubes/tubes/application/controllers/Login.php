@@ -59,7 +59,7 @@ class Login extends CI_Controller {
 		$email = $this->input->post('regmail');
 		if ($this->admin->cek_email($email)) {
 			echo "<script>swal('Email Sudah Terpakai')</script>";
-			redirect('home');
+			//redirect('home');
 		} else {
 			echo "SUKSES";
 			$this->admin->insert_admin($data);
@@ -95,7 +95,7 @@ class Login extends CI_Controller {
 				$this->session->set_flashdata('gagal', $this->email->print_debugger());
 			}
 
-			redirect('masuk');
+			// redirect('masuk');
 		}
 	}
 
@@ -133,7 +133,7 @@ class Login extends CI_Controller {
 			$this->session->set_flashdata('gagal', $this->email->print_debugger());
 		}
 
-		redirect('masuk');
+		//redirect('masuk');
 	}
 
 	public function aktivasi()
@@ -147,7 +147,10 @@ class Login extends CI_Controller {
 			redirect('masuk');
 		} else {
 			echo "Waktu untuk aktivasi telah kadaluarsa";
-			$this->admin->hangus_akun($code);
+			//$this->admin->hangus_akun($code);
+			if ($this->admin->cek_aktif($code)) {
+				$this->admin->hangus_akun($code);
+			}
 		}
 		
 	}
